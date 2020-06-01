@@ -5,7 +5,7 @@ from .models import Blog
 
 # Create your views here.
 def blog(request):
-    blogs = Blog.objects.order_by('-date')
+    blogs = Blog.objects.order_by('-datetime')
     return render(request, 'blog/index.html', {'blogs': blogs})
 
 
